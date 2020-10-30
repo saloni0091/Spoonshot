@@ -17,6 +17,8 @@ root.configure(bg="IndianRed4")
 same=True
 n=0.25
 
+#functions
+
 def search_book():
     root.destroy()
     import search
@@ -38,12 +40,12 @@ def update_book():
     import update
 
     
-
+#heading
 headingFrame1 = Frame(root,bg="black",bd=5)
 headingFrame1.place(relx=0.2,rely=0.1,relwidth=0.6,relheight=0.16)
 headingLabel = Label(headingFrame1, text="Welcome to \n SPOONSHOT Library", bg='black', fg='white', font=('Courier',15))
 headingLabel.place(relx=0,rely=0, relwidth=1, relheight=1)
-
+#buttons
 btn1 = Button(root,text="Search Book", fg='white', bg="#c48b95",bd=5, cursor="hand2",command=search_book)
 btn1.place(relx=0.23,rely=0.4, relwidth=0.55,relheight=0.1)
 
