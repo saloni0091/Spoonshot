@@ -35,5 +35,5 @@ while True:
     user_update = input("Would you like to enter another ISBN? y or n ").lower().strip()
 
     if user_update != "y":
-        print("May the Zen of Python be with you. Have a nice day!")
+        print("keep reading!")
         break # as the name suggests, the break statement breaks out of the while loop
