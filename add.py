@@ -18,10 +18,12 @@ def bookRegister():
     
     
     try:
+      # sql query to perform operation on the database
         sql=("insert into book(BID, Title, Author, Status) values (%s,%s,%s,%s)")
         val=(bid,title,author,status)
         cursor.execute(sql,val)
         con.commit()
+        #message box to show weather addition is done successfully or not
         messagebox.showinfo('Success',"Book added successfully")
     except:
         messagebox.showinfo("Error","Can't add data into Database")
@@ -38,6 +40,8 @@ def addBook():
     
     global bookInfo1 ,bookInfo2, bookInfo3, bookInfo4, Canvas1, bookTable, root
     
+    
+    # program for the GUI part using tkinter
     root = Tk()
     root.title("Library")
     root.minsize(width=400,height=400)
@@ -51,10 +55,11 @@ def addBook():
     
     Canvas1.config(bg="IndianRed4")
     Canvas1.pack(expand=True,fill=BOTH)
-        
+     
+      # code for heading 
     headingFrame1 = Frame(root,bg="black",bd=5)
     headingFrame1.place(relx=0.25,rely=0.1,relwidth=0.5,relheight=0.13)
-
+ #code for input box
     headingLabel = Label(headingFrame1, text="Add Books", bg='black', fg='white', font=('Courier',15))
     headingLabel.place(relx=0,rely=0, relwidth=1, relheight=1)
 
@@ -95,6 +100,7 @@ def addBook():
     SubmitBtn = Button(root,text="SUBMIT", fg='black', bg="#e6a8b2", command=bookRegister)
     SubmitBtn.place(relx=0.28,rely=0.9, relwidth=0.18,relheight=0.08)
     
+    #quit button
     quitBtn = Button(root,text="Quit", fg='black', bg="#e6a8b2", command=quit)
     quitBtn.place(relx=0.53,rely=0.9, relwidth=0.18,relheight=0.08)
 
