@@ -1,0 +1,10 @@
+ ***********Install*************
+Python 3.7
+
+MySQL Module 
+
+tkinter(inbuilt) Module.
+
+import noteapp.sql file in your mysql database.
+
+Now run home.py in command which will start your Application.
